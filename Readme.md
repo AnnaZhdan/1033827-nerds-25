@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Анна Жданова](https://up.htmlacademy.ru/htmlcss/25/user/1033827).
-* Наставник: [Дмитрий Рябинин] (https://htmlacademy.ru/profile/id63289).
+* Наставник: [Дмитрий Рябинин](https://htmlacademy.ru/profile/id63289).
 
 ---
 
