@@ -1,8 +1,8 @@
 <DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <title>Дизайн-студия "Нердс"</title>
+   <meta charset="utf-8">
+   <title>Дизайн-студия "Нердс"</title>
   </head>
   <body>
     <header class="main-header">
@@ -22,17 +22,54 @@
       </nav>
     </header>
      <main class="container">
-       <!-- <aside class="filters">
-        <h2 class="visually-hidden">Фильтр товаров</h2>
-        <ul class="filters-item">
-         <li class="filters-list">СТОИМОСТЬ:</li>
-         <li class="filters-item">СОРТИРОВАТЬ:</li>
-         <li>По цене</li>
-          <a href="#"><li>По типу</li></a>
-          <a href="#"><li>По названию</li></a>
+      <aside class="filters">
+      <h2 class="visually-hidden">Фильтр товаров</h2>
+      <ul class="filters-item">
+       <li class="filters-list">СТОИМОСТЬ:</li>
+       <li class="filters-item">СОРТИРОВАТЬ:</li>
+       <li>По цене</li>
+       <a href="#"><li>По типу</li></a>
+       <a href="#"><li>По названию</li></a>
+      </ul>
+      <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+       <fieldset>
+        <legend> Сетка:</legend>
+        <ul>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-radio" type="radio"
+            name="features" value="Adaptive" checked>Адаптивная</li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-radio" type="radio"
+            name="features" value="Fixed">Фиксированная</li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-radio" type="radio"
+            name="features" value="Rubber">Резиновая</li>
         </ul>
-       </aside>
-       Здесь будет форма -->
+       </fieldset>
+       <fieldset>
+        <legend>Особенности:</legend>
+        <ul>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+            name="Слайдер" id="Слайдер" checked>Слайдер</li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+            name="Блок преимуществ" id="Блок преимуществ">Блок преимуществ</li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+            name="Новости" id="Новости" checked>Новости</li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+            name="Галерея" id="Галерея" >Галерея</li>
+          <li class="filter-option">
+            <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+            name="Корзина" id="Корзина">Корзина</li>
+        </ul>
+       </fieldset>
+       <button type="submit" class="filter-button button">Показать
+       </button>
+      </form>
+      </aside>
 
        <section class="catalog">
         <h2 class="visually-hidden">Готовые шаблоны</h2>
@@ -112,6 +149,22 @@
       <img src="img/map-marker.png" width="231" height="190" alt="Nerds">
      </section>
     </main>
+
+    <section class="contacts-info">
+     <h2>НАПИШИТЕ НАМ</h2>
+     <form class="contacts-info" action="https://echo.htmlacademy.ru" method="post">
+      <p class="contacts-item"> Ваше имя
+       <input type="text" name="date" value="" placeholder="Имя Фамилия">
+      </p>
+      <p class="contacts-item">Ваш e-mail:
+       <input type="text" name="time" value="" placeholder="email@example.com">
+      </p>
+      <p class="contacts-item">Текст письма:
+       <input type="text" name="name" value="" placeholder="В свободной форме">
+      </p>
+      <button class="button" type="submit">Отправить</button>
+      </form>
+     </section>
 
      <footer class="main-footer">
       <ul class="footer-social">
