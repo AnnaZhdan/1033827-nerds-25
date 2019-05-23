@@ -3,8 +3,11 @@
   <head>
    <meta charset="utf-8">
    <title>Дизайн-студия "Нердс"</title>
+   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=cyrillic" rel="stylesheet">
+   <link href="css/normalize.css" rel="stylesheet">
+   <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo" href="index.html">
@@ -40,7 +43,7 @@
               <li class="filter-option">
                 <label>
                   <input class="visually-hidden filter-input filter-input-radio" type="radio"
-              name="features" value="Fixed">Фиксированная
+              name="features" value="Fixed" disabled>Фиксированная
                 </label>
               </li>
               <li class="filter-option">
@@ -107,14 +110,15 @@
         </div>
         <ul class="catalog-list">
           <li class="catalog-item">
-            <div>
+            <div class="template-page">
               <h3>
               <a href="catalog-nerds.html">
                 <img src="img/sedona.jpg" width="360" height="576" alt="Информационный сайт для туристов «Sedona»">
               </a>
-              </h3>
+            </h3>
+            <a class= "template" href="catalog-nerds.html">Sedona</a>
               <p>Информационный сайт для туристов</p>
-              <a class="button" href="#">9900 руб.</a>
+              <a class="button-red" href="#">9900 руб.</a>
             </div>
           </li>
           <li class="catalog-item">
@@ -177,13 +181,13 @@
        ул. Б. Конюшенная, д. 19/8<br>
        тел. +7 (812) 275-75-75
         </p>
-        <a class="button" href="#">Напишите нам</a>
+        <a class="button-red" href="#">Напишите нам</a>
         <img src="img/map-marker.png" width="231" height="190" alt="Nerds">
       </section>
     </main>
 
     <section class="contacts-info">
-      <h2>НАПИШИТЕ НАМ</h2>
+      <h2>Напишите нам:</h2>
       <form class="contacts-info" action="https://echo.htmlacademy.ru" method="post">
         <p class="contacts-item"> Ваше имя
           <input type="text" name="date" value="" placeholder="Имя Фамилия">
@@ -194,7 +198,7 @@
         <p class="contacts-item">Текст письма:
           <input type="text" name="name" value="" placeholder="В свободной форме">
         </p>
-        <button class="button" type="submit">Отправить</button>
+        <button class="button-red" type="submit">Отправить</button>
       </form>
     </section>
 
