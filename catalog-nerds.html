@@ -9,26 +9,29 @@
   </head>
   <body class="inner-page">
     <header class="main-header">
+      <div class="container">
       <nav class="main-navigation">
-        <a class="main-header-logo" href="index.html">
-          <img src="img/nerds-logo.svg" width="150" height="100" alt="Логотип дизайн-студии Нердс">
+        <a class="main-header-logo">
+          <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студии Нердс">
         </a>
-        <ul class="site-navigation">
-          <li><a href="studio.html">Студия</a></li>
-          <li><a href="clients.html">Клиенты</a></li>
-          <li class="site-navigation-current"><a href="shop.html">Магазин</a></li>
-          <li><a href="contact.html">Контакты</a></li>
-        </ul>
-        <ul class="user-navigation">
-          <li class="login-link"> <a href="#">Корзина</a></li>
-        </ul>
+            <ul class="site-navigation">
+              <li><a href="studio.html">Студия</a></li>
+              <li><a href="clients.html">Клиенты</a></li>
+              <li><a href="shop.html">Магазин</a></li>
+              <li><a href="contact.html">Контакты</a></li>
+            </ul>
+            <ul class="user-navigation">
+              <li class="login-link"><a href="basket.html">Корзина</a></li>
+            </ul>
       </nav>
       <h1>Магазин готовых шаблонов</h1>
+    </div>
     </header>
 
-    <main class="container">
+    <main>
       <aside class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
+        <div class="container">
         <div class="catalog-columns">
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <fieldset>
@@ -94,11 +97,12 @@
           </fieldset>
           <button type="submit" class="filter-button button">Показать
           </button>
+        </div>
         </form>
       </aside>
+
       <section class="catalog">
         <h2 class="visually-hidden">Готовые шаблоны</h2>
-        <div class="container">
         <div class="catalog-order">
           <ul class="filter-order">
             <li class="filter-list">Сортировать</li>
@@ -123,7 +127,7 @@
           <li class="catalog-item">
             <div>
               <h3>
-                <a class="visually-hidden" href="catalog-nerds.html">
+                <a  href="catalog-nerds.html">
                   <img src="img/pink.jpg" width="360" height="576" alt="Приложение Pink">
                 </a>
               </h3>
@@ -132,7 +136,7 @@
           <li class="catalog-item">
             <div>
               <h3>
-                <a class="visually-hidden" href="catalog-nerds.html">
+                <a href="catalog-nerds.html">
                   <img src="img/barbershop.jpg" width="360" height="576" alt="Барбершоп Borodinski">
                 </a>
               </h3>
@@ -141,7 +145,7 @@
           <li class="catalog-item">
             <div>
               <h3>
-                <a class="visually-hidden" href="catalog-nerds.html">
+                <a href="catalog-nerds.html">
                   <img src="img/mishka.jpg" width="360" height="576" alt="Милые штучки ручной работы для дома Mishka">
                 </a>
               </h3>
@@ -150,7 +154,7 @@
           <li class="catalog-item">
             <div>
               <h3>
-                <a class="visually-hidden" href="catalog-nerds.html">
+                <a href="catalog-nerds.html">
                   <img src="img/aplus.jpg" width="360" height="576" alt="A+">
                 </a>
               </h3>
@@ -159,7 +163,7 @@
           <li class="catalog-item">
             <div>
               <h3>
-                <a class="visually-hidden" href="catalog-nerds.html">
+                <a href="catalog-nerds.html">
                   <img src="img/kvast.jpg" width="360" height="576" alt="Крафтовый квас «Кваст»">
                 </a>
               </h3>
@@ -168,10 +172,9 @@
         </ul>
       </div>
       </section>
-    </div>
 
-      <section>
-        <div class="pagination">
+      <section class="pagination">
+        <div class="pagination-style">
           <ul class="pagination-list">
             <li class="pagination-item-current"><a href="#">1</a></li>
             <li class="pagination-item"><a>2</a></li>
@@ -180,33 +183,7 @@
           </ul>
         </div>
       </section>
-
-      <section class="contacts">
-        <h2>NЁRDS DESIGN STUDIO</h2>
-        <p>191186, Санкт-Петербург,<br>
-       ул. Б. Конюшенная, д. 19/8<br>
-       тел. +7 (812) 275-75-75
-        </p>
-        <a class="button-red" href="#">Напишите нам</a>
-        <img src="img/map-marker.png" width="231" height="190" alt="Nerds">
-      </section>
     </main>
-
-    <section class="contacts-info">
-      <h2>Напишите нам:</h2>
-      <form class="contacts-info" action="https://echo.htmlacademy.ru" method="post">
-        <p class="contacts-item"> Ваше имя
-          <input type="text" name="date" value="" placeholder="Имя Фамилия">
-        </p>
-        <p class="contacts-item">Ваш e-mail:
-          <input type="text" name="time" value="" placeholder="email@example.com">
-        </p>
-        <p class="contacts-item">Текст письма:
-          <input type="text" name="name" value="" placeholder="В свободной форме">
-        </p>
-        <button class="button-red" type="submit">Отправить</button>
-      </form>
-    </section>
 
     <footer class="main-footer">
       <div class="container">
@@ -233,5 +210,31 @@
       </div>
       </div>
     </footer>
+
+    <section class="contacts">
+      <h2>NЁRDS DESIGN STUDIO</h2>
+      <p>191186, Санкт-Петербург,<br>
+     ул. Б. Конюшенная, д. 19/8<br>
+     тел. +7 (812) 275-75-75
+      </p>
+      <a class="button-red" href="#">Напишите нам</a>
+      <img src="img/map-marker.png" width="231" height="190" alt="Nerds">
+    </section>
+
+  <section class="contacts-info">
+    <h2>Напишите нам:</h2>
+    <form class="contacts-info" action="https://echo.htmlacademy.ru" method="post">
+      <p class="contacts-item"> Ваше имя
+        <input type="text" name="date" value="" placeholder="Имя Фамилия">
+      </p>
+      <p class="contacts-item">Ваш e-mail:
+        <input type="text" name="time" value="" placeholder="email@example.com">
+      </p>
+      <p class="contacts-item">Текст письма:
+        <input type="text" name="name" value="" placeholder="В свободной форме">
+      </p>
+      <button class="button-red" type="submit">Отправить</button>
+    </form>
+  </section>
   </body>
 </html>

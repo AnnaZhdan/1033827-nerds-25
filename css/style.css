@@ -14,7 +14,17 @@ body {
 
   background-color: #ffffff;
 }
-.inner-page {
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+/*.inner-page {
   color: #000000;
 
   background-color: #ffffff;
@@ -27,8 +37,8 @@ body {
 
   outline: 2px solid blueviolet;
   outline-offset: -2px;
-}
-.inner-page .main-header h1 {
+}*/
+.main-header h1 {
   margin: 0;
   padding: 115px;
 
@@ -38,6 +48,7 @@ body {
   color: #000000;
   text-transform: none;
   text-align: center;
+  background-color: #eeeeee;
 
 }
 .container {
@@ -53,9 +64,11 @@ a {
   text-decoration: none;
 }
 .main-header {
-  width: 100%;
-  margin-bottom: 20px;
-  min-height: 135px;
+  /* width: 100%; */
+  /* margin-bottom: 20px; */
+  min-height: 114px;
+  display: flex;
+  align-items: flex-end;
 
   background-color: #eeeeee;
 
@@ -63,10 +76,10 @@ a {
   outline-offset: -2px;
 }
 .main-header-logo {
-  order:0;
+  /* order:0; */
   width: 160px;
   height: 65px;
-  padding: 23px 20px;
+  /* padding: 23px 20px; */
 
   /*display: block;*/
 
@@ -92,25 +105,26 @@ a {
   text-transform:uppercase;
 
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 
   width:1160px;
-  min-height: 85px;
+  /* min-height: 85px; */
 
- order: 0;
+ /* order: 0; */
 
- background-color: #eeeeee;
+ /* background-color: #eeeeee; */
 
-  min-height: 135px;
+  /* min-height: 135px; */
   outline: 2px solid green;
   outline-offset: -2px;
 }
 .site-navigation {
   margin: 0;
   padding: 0;
-  width: 540px;
+  margin-bottom: 10px;
+  /* width: 540px; */
 
   display: flex;
   flex-direction:row;
@@ -118,28 +132,38 @@ a {
   align-items: flex-end;
 
   list-style: none;
-  min-height: 85px;
+  /* min-height: 85px; */
 
   outline: 2px solid #fcff10;
   outline-offset: -2px;
 }
-}
 .site-navigation li:not(:first-child) {
-  margin-left: 40px;
+  margin-left: 46px;
 }
 .user-navigation {
   margin: 0;
+  /*margin-bottom: 10px;*/
   padding: 0;
-  width: 100px;
+  width: 160px;
+  display: flex;
+  justify-content: flex-end;
 
-  min-height: 85px;
+  /* min-height: 85px; */
 
   list-style: none;
   outline: 2px solid #0828b4;
+  outline-offset: -2px;
+}
+.slider {
+  height: 431px;
+  overflow: hidden;
+
+  outline: 2px solid blueviolet;
+  outline-offset: -2px;
 }
 .slider-list {
   margin: 0;
-  padding: 80px;
+  /* padding: 80px; */
   width: 1160px;
   min-height: 415px;
 
@@ -151,14 +175,23 @@ a {
   list-style: none;
   outline: 2px solid #00d7da;
 }
+.advantages {
+  min-height: 508px;
+  display: flex;
+  align-items: center;
+
+  outline: 2px solid blueviolet;
+  outline-offset: -2px;
+}
 .features-list {
   display: flex;
-  justify-content: space-between;
+  margin: 0;
+  /* justify-content: space-between; */
 
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
   padding: 0;
-  width: 1160px;
-  min-height: 430px;
+  /* width: 1160px; */
+  /* min-height: 430px; */
 
   list-style: none;
 
@@ -166,9 +199,12 @@ a {
   outline-offset: -2px;
 }
 .feature-item {
-  min-height: 430px;
+  min-height: 348px;
   width: 300px;
   text-align: left;
+}
+.feature-item:not(:first-child) {
+  margin-left: 100px;
 }
 .feature-item h3 {
   font-size: 24px;
@@ -176,6 +212,7 @@ a {
 }
 .container h3 {
   font-weight: 500;
+  text-transform: uppercase;
 }
 .container p {
   color:#283136;
@@ -262,11 +299,13 @@ a {
   color:#bdbdbd;
 }
 .offer {
-  margin-bottom: 80px;
+  margin: 0;
   padding: 0;
-  width: 1160px;
+  /*width: 1160px;*/
   min-height: 530px;
 
+  display:flex;
+  justify-content: space-between;
   list-style: none;
 
   outline: 2px solid #ff7800;
@@ -275,11 +314,10 @@ a {
 .partnerslogo-list {
   margin: 0;
   padding: 0;
-  width: 1160px;
-  min-height: 180px;
+  /*width: 1160px;*/
+  min-height: 182px;
 
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 
   list-style: none;
@@ -289,7 +327,8 @@ a {
 
 }
 .partnerslogo-item{
- padding: 60px 30px;
+  margin: 0;
+  padding: 60px 30px;
 
   list-style: none;
 
@@ -311,12 +350,12 @@ a {
 }
 .main-footer {
   padding: 0;
-  margin-top: 70px;
-  padding: 70px 0;
+  margin-top: 0px;
+  margin: : 0;
   color: #000000;
 
-  weight:1160px;
-  min-height: 215px;
+  weight: 1160px;
+  /*min-height: 215px;*/
 
   background-color: #ffffff;
   background-position: 0 0;
@@ -326,7 +365,6 @@ a {
 }
 .main-footer .container{
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 .main-footer p{
@@ -334,7 +372,6 @@ a {
   font-size: 16px;
   line-height: 22px;
   text-align: left;
-  margin-top; auto;
 }
 .main-footer b {
   text-align: left;
@@ -346,16 +383,16 @@ a {
 }
 .footer-social {
   margin-top: 70px;
+  margin-bottom: 70px;
   padding: 0;
 
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start;
 
   width: 260px;
 
-  text-align: left;
+  outline: 2px solid #00aeff;
+  outline-offset: -2px;
 }
 .footer-social ul {
   list-style: none;
@@ -375,8 +412,16 @@ background-color: #d7373b
 .tagline {
   margin-top: 80px;
   padding-right: 215px;
-
   width: 560px;
+
+  /*display: flex;
+  flex-direction: column;
+  justify-content: space-between;*/
+}
+.tagline p {
+  width: 560px;
+  margin-bottom: 70px;
+  padding-right: 400px;
 }
 .catalog h1{
   font-size: 55px;
@@ -384,11 +429,10 @@ background-color: #d7373b
 }
 .catalog-columns {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 .filter {
-  width: 260px
+  width: 260px;
   min height:280px;
 
   outline: 2px solid #b273f9;
@@ -423,14 +467,13 @@ background-color: #d7373b
   margin: 0;
 
   width:760px;
-  min-height: 1915px;
+  /*min-height: 1915px;*/
 
   outline: 2px solid #0e7658;
   outline-offset: -2px;
 }
 .catalog-list {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content:space-between;
 
@@ -497,6 +540,18 @@ color: #666666;
   color: #000000;
 
   opacity: 0.3;
+}
+.pagination {
+  margin: 0;
+  padding: 0;
+
+  width: 760px;
+
+  display: flex;
+  justify-content: space-between;
+
+  outline: 2px solid #0e7658;
+  outline-offset: -2px;
 }
 .pagination-list {
   list-style: none;
