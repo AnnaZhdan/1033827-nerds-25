@@ -16,13 +16,18 @@ body {
 }
 .visually-hidden {
   position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
+
   width: 1px;
+  height: 1px;
   margin: -1px;
-  padding: 0;
   border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 /*.inner-page {
   color: #000000;
@@ -38,18 +43,24 @@ body {
   outline: 2px solid blueviolet;
   outline-offset: -2px;
 }*/
-.main-header h1 {
+.title h1{
   margin: 0;
-  padding: 115px;
+  padding:0;
 
+  min-height: 240px;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   color: #000000;
   text-transform: none;
   text-align: center;
-  background-color: #eeeeee;
 
+  background-color: #eeeeee;
 }
 .container {
   width: 1160px;
@@ -62,6 +73,10 @@ body {
 
 a {
   text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
 .main-header {
   /* width: 100%; */
@@ -105,7 +120,6 @@ a {
   text-transform:uppercase;
 
   display: flex;
-  /* flex-direction: row; */
   justify-content: space-between;
   align-items: flex-end;
 
@@ -123,11 +137,10 @@ a {
 .site-navigation {
   margin: 0;
   padding: 0;
-  margin-bottom: 10px;
+  margin-top: 35px;
   /* width: 540px; */
 
   display: flex;
-  flex-direction:row;
   justify-content: space-between;
   align-items: flex-end;
 
@@ -144,15 +157,56 @@ a {
   margin: 0;
   /*margin-bottom: 10px;*/
   padding: 0;
-  width: 160px;
+  max-width: 160px;
+
   display: flex;
   justify-content: flex-end;
 
-  /* min-height: 85px; */
-
   list-style: none;
+
   outline: 2px solid #0828b4;
   outline-offset: -2px;
+}
+.user-navigation .login-link {
+  padding-left: 86px;
+  position: relative;
+}
+.login-link::before {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  width: 15px;
+  height: 15px;
+
+  background-image: url("img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+.site-navigation a,
+.user-navigation a {
+  display: block;
+  padding: 0;
+  margin: 0;
+  color: #000000;
+}
+.site-navigation a:hover,
+.user-navigation a:hover {
+  color: #fb565a;
+}
+.site-navigation a:focus,
+.user-navigation a:focus {
+  color: #fb565a;
+}
+.site-navigation a:active,
+.user-navigation a:active {
+  color:#bdbdbd;
 }
 .slider {
   height: 431px;
@@ -163,8 +217,7 @@ a {
 }
 .slider-list {
   margin: 0;
-  /* padding: 80px; */
-  width: 1160px;
+  padding: 0;
   min-height: 415px;
 
   background-color: #eeeeee;
@@ -207,8 +260,13 @@ a {
   margin-left: 100px;
 }
 .feature-item h3 {
+  position: relative;
+
   font-size: 24px;
   line-height: 30px;
+
+  margin-top: 31px;
+  margin-bottom: 28px;
 }
 .container h3 {
   font-weight: 500;
@@ -277,27 +335,6 @@ a {
 .button-yellow:active {
   background-color: #e5a722;
 }
-
-.site-navigation,
-.user-navigation {
-  list-style: none;
-}
-.site-navigation a,
-.user-navigation a {
-  color: #000000;
-}
-.site-navigation a:hover,
-.user-navigation a:hover {
-  color: #fb565a;
-}
-.site-navigation a:focus,
-.user-navigation a:focus {
-  color: #fb565a;
-}
-.site-navigation a:active,
-.user-navigation a:active {
-  color:#bdbdbd;
-}
 .offer {
   margin: 0;
   padding: 0;
@@ -350,7 +387,6 @@ a {
 }
 .main-footer {
   padding: 0;
-  margin-top: 0px;
   margin: : 0;
   color: #000000;
 
@@ -382,12 +418,12 @@ a {
   color:#000000;
 }
 .footer-social {
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin: 0;
   padding: 0;
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   width: 260px;
 
@@ -423,17 +459,17 @@ background-color: #d7373b
   margin-bottom: 70px;
   padding-right: 400px;
 }
-.catalog h1{
-  font-size: 55px;
-  line-height: 55px;
-}
-.catalog-columns {
+.catalog-column {
   display: flex;
   justify-content: space-between;
 }
 .filter {
   width: 260px;
   min height:280px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   outline: 2px solid #b273f9;
   outline-offset: -2px;
