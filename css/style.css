@@ -181,7 +181,7 @@ img {
   width: 15px;
   height: 15px;
 
-  background-image: url("img/cart-icon.svg");
+  background-image: url("../img/cart-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -385,11 +385,33 @@ img {
 
   list-style: none;
 }
-.contacts {
+.modal-contacts {
+  position: fixed;
+  bottom: 180px;
+  left: 50%;
+
   width: 800px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 73px;
+  padding-bottom: 84px;
+
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
 
   outline: 2px solid #5a1201;
   outline-offset: -2px;
+}
+.modal-close {
+  width: 21px;
+  height: 21px;
+
+  font-size: 0;
+
+  background-color: red;
+  border: 0;
+
+  cursor: pointer;
 }
 .contacts-form {
   display: flex;
@@ -399,7 +421,7 @@ img {
   outline: 2px solid #ff7800;
   outline-offset: -2px;
 }
-.contacts h2 {
+.modal-contacts h2 {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
@@ -574,6 +596,8 @@ background-color: #d7373b;
   margin-bottom: 27px;
   padding: 0;
   padding-left:37px;
+  display: flex;
+  align-items: center;
 }
 .filter-option + label {
   position: relative;
@@ -583,7 +607,38 @@ background-color: #d7373b;
   cursor: pointer;
   user-select: none;
 }
-.filter-input-checkbox + label::before {
+.radio-indicator {
+  display: block;
+  width: 25px;
+  height: 25px;
+  box-sizing: border-box;
+  border: 4px solid #b8b8b8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radio-indicator::before {
+  content: "";
+  display: none;
+  width: 9px;
+  height: 9px;
+  background-color: #b8b8b8;
+  border-radius: 50%;
+}
+.filter-input-radio:checked ~ .radio-indicator::before {
+  display: block;
+}
+.radio-title {
+  margin-left: 10px;
+}
+.radio-indicator:hover {
+  color: #b8b8b8;
+}
+.radio-indicator:focus {
+  color: #4d4d4d;
+}
+/*.filter-input-checkbox + label::before {
   content: "";
   position: absolute;
 
@@ -591,16 +646,58 @@ background-color: #d7373b;
   height: 23px;
 
   border: 2px solid #b8b8b8;
-}
-.filter-input:hover + label,
+}*/
+/*.filter-input:hover + label,
 .filter-input:focus + label {
   color:#283136;
 }
-
 .filter-input:disabled + label {
   color:#283136;
 
   opacity: 0.3;
+}*/
+.checkbox-indicator {
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.filter-input-checkbox:checked {
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.checkbox-title {
+  margin-left: 13px;
+}
+.filter-button{
+  display: inline-block;
+  font: inherit;
+  width: 100%;
+  min-height: 50px;
+  border-radius: 4px;
+
+  text-align: center;
+  color: #000000;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #eeeeee;
+  border: none;
+}
+.filter-button:hover {
+  background-color: #dfdfdf;
+}
+.filter-button:focus {
+  color: #a9a9a9;
+  background-color: #d5d5d5;
+  border-left: 3px;
+  border-color: #bfbfbf;
 }
 .catalog {
   padding: 0;
@@ -613,7 +710,60 @@ background-color: #d7373b;
   outline-offset: -2px;
 }
 .catalog-order {
+  padding: 0;
+  margin: 0;
+  width: 760px;
 
+  display: flex;
+  justify-content:
+
+  outline: 2px solid #00aeff;
+  outline-offset: -2px;
+}
+.catalog-order h3 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 60px;
+
+  font-size: 18px;
+  line-height: 18px;
+
+  width: 160px;
+
+  display: flex;
+  justify-content: flex-start;
+
+  list-style: none;
+  color:#000000;
+
+  outline: 2px solid #4d4d4d;
+  outline-offset: -2px;
+}
+.filter-order {
+  padding: 0;
+  margin: 0;
+  padding-left: 240px;
+  text-transform: uppercase;
+  width: 280px;
+
+  display: flex;
+  justify-content: space-between;
+
+  list-style: none;
+
+  outline: 2px solid #551111;
+  outline-offset: -2px;
+}
+
+.delta-up a {
+  background-image: url("../img/icon-up-dir.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+.delta-down a {
+  background-image: url("../icon-down-dir.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 .catalog-list {
   display: flex;
@@ -642,7 +792,6 @@ background-color: #d7373b;
 .catalog-item:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
 .catalog-item p {
   margin: 0;
   padding: 0;

@@ -44,22 +44,22 @@
                 <legend> Сетка:</legend>
                 <ul>
                   <li class="filter-option">
-                    <label>
-                      <input class="visually-hidden filter-input filter-input-radio" type="radio"
-              name="features" value="Adaptive" checked>Адаптивная
-                    </label>
+                    <input id="layout-type-adaptive" class="visually-hidden filter-input filter-input-radio" type="radio"
+              name="features" value="Adaptive" checked>
+                    <label for="layout-type-adaptive" class="radio-indicator"></label>
+                    <label for="layout-type-adaptive" class="radio-title">Адаптивная</label>
                   </li>
                   <li class="filter-option">
-                    <label>
-                      <input class="visually-hidden filter-input filter-input-radio" type="radio"
-              name="features" value="Fixed" >Фиксированная
-                    </label>
+                    <input id="layout-type-fixed" class="visually-hidden filter-input filter-input-radio" type="radio"
+              name="features" value="fixed" >
+                    <label for="layout-type-fixed" class="radio-indicator"></label>
+                    <label for="layout-type-fixed" class="radio-title">Фиксированная</label>
                   </li>
                   <li class="filter-option">
-                    <label>
-                      <input class="visually-hidden filter-input filter-input-radio" type="radio"
-              name="features" value="Rubber">Резиновая
-                    </label>
+                    <input id="layout-type-rubber" class="visually-hidden filter-input filter-input-radio" type="radio"
+              name="features" value="rubber">
+                    <label for="layout-type-rubber" class="radio-indicator"></label>
+                    <label for="layout-type-rubber" class="radio-title">Резиновая</label>
                   </li>
                 </ul>
               </fieldset>
@@ -67,34 +67,35 @@
                 <legend>Особенности:</legend>
                 <ul>
                   <li class="filter-option">
-                    <label>
-                      <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-              name="Слайдер" id="Слайдер" checked>Слайдер
-                    </label>
+                    <input id="layout-type-slider" class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+              name="Слайдер" checked>
+                    <label for="layout-type-slider" class="checkbox-indicator"></label>
+                    <label for="layout-type-slider" class="checkbox-title">Слайдер</label>
+                  </li>
+                  <li class="filter-option">
+                    <input id="benefits block" class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+              name="Блок преимуществ" >
+                    <label for="benefits block" class="checkbox-indicator"></label>
+                    <label for="benefits block" class="checkbox-title">Блок преимуществ</label>
                   </li>
                   <li class="filter-option">
                     <label>
-                      <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-              name="Блок преимуществ" id="Блокпреимуществ">Блок преимуществ
-                    </label>
+                      <input id="news" class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+              name="Новости" checked>
+                      <label for="news" class="checkbox-indicator"></label>
+                      <label for="news" class="checkbox-title">Новости</label>
                   </li>
                   <li class="filter-option">
-                    <label>
-                      <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-              name="Новости" id="Новости" checked>Новости
-                    </label>
+                      <input id="gallery" class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+              name="Галерея" >
+                    <label for="gallery" class="checkbox-indicator"></label>
+                    <label for="gallery" class="checkbox-title">Галерея</label>
                   </li>
                   <li class="filter-option">
-                    <label>
-                      <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-              name="Галерея" id="Галерея" >Галерея
-                    </label>
-                  </li>
-                  <li class="filter-option">
-                    <label>
-                      <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
-              name="Корзина" id="Корзина">Корзина
-                      </label>
+                      <input id="basket" class="visually-hidden filter-input filter-input-checkbox" type="checkbox"
+              name="Корзина" >
+                      <label for="basket" class="checkbox-indicator"></label>
+                      <label for="basket" class="checkbox-title">Корзина</label>
                   </li>
                 </ul>
               </fieldset>
@@ -106,71 +107,73 @@
       <section class="catalog">
         <h2 class="visually-hidden">Готовые шаблоны</h2>
         <div class="catalog-order">
+          <h3>Сортировать:</h3>
+          <div class="container">
           <ul class="filter-order">
-            <li class="filter-list">Сортировать</li>
-            <li class="filter-list">По цене</li>
-            <li class="filter-list"><a href="">По типу</a></li>
-            <li class="filter-list"><a href="">По названию</a></li>
+            <li class="filter-list">
+              <a class="selection" href="catalog-nerds.html">По цене<a>
+            </li>
+            <li class="filter-list">
+              <a class="selection" href="catalog-nerds.html">По типу</a>
+            </li>
+            <li class="filter-list">
+              <a hclass="selection" href="catalog-nerds.html">По названию</a>
+            </li>
+            <li class="delta-up"><a href="catalog-nerds.html"></a>
+            </li>
+            <li class="delta-down"><a href="catalog-nerds.html"></a>
+            </li>
           </ul>
+        </div>
         </div>
         <ul class="catalog-list">
           <li class="catalog-item">
             <div class="template-page">
               <h3>
+              </h3>
               <a href="catalog-nerds.html">
                 <img src="img/sedona.jpg" width="360" height="576" alt="Информационный сайт для туристов «Sedona»">
               </a>
-              </h3>
               <div class="order">
-            <a class= "template" href="catalog-nerds.html">Sedona</a>
-              <p>Информационный сайт для туристов</p>
-              <a class="button-red" href="#">9900 руб.</a>
+                <a class= "template" href="catalog-nerds.html">Sedona</a>
+                <p>Информационный сайт для туристов</p>
+                <a class="button-red" href="#">9900 руб.</a>
               </div>
             </div>
           </li>
           <li class="catalog-item">
             <div>
-              <h3>
                 <a  href="catalog-nerds.html">
                   <img src="img/pink.jpg" width="360" height="576" alt="Приложение Pink">
                 </a>
-              </h3>
             </div>
           </li>
           <li class="catalog-item">
             <div>
-              <h3>
                 <a href="catalog-nerds.html">
                   <img src="img/barbershop.jpg" width="360" height="576" alt="Барбершоп Borodinski">
                 </a>
-              </h3>
             </div>
           </li>
           <li class="catalog-item">
             <div>
-              <h3>
                 <a href="catalog-nerds.html">
                   <img src="img/mishka.jpg" width="360" height="576" alt="Милые штучки ручной работы для дома Mishka">
                 </a>
-              </h3>
             </div>
           </li>
           <li class="catalog-item">
             <div>
-              <h3>
                 <a href="catalog-nerds.html">
                   <img src="img/aplus.jpg" width="360" height="576" alt="A+">
                 </a>
-              </h3>
             </div>
           </li>
           <li class="catalog-item">
             <div>
-              <h3>
                 <a href="catalog-nerds.html">
                   <img src="img/kvast.jpg" width="360" height="576" alt="Крафтовый квас «Кваст»">
                 </a>
-              </h3>
             </div>
           </li>
         </ul>
